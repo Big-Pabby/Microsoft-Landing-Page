@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+button {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: #262626;
+}
+a:hover {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 2px;
+}
+
+.btn {
+    background-color: #ffffff;
+    padding: 15px 35px;
+    transition: .5s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+body {
+    font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;;
+}
+
+
+.nav-bar {
+    margin: 20px auto;
+    font-size: 13px;
+}
+
+.nav img {
+    margin-right: 20px;
+}
+
+.links a {
+    margin-left: 10px;
+}
+
+.showcase {
+    background: url('../images/microsoft-showcase-image.webp');
+    background-repeat: no-repeat;
+    height: 460px;
+    color: #ffffff;
+}
+.showcase-content {
+    width: 480px;
+    margin: auto 50px;
+}
+
+.showcase-content p {
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+
+.showcase-content .btn a {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.microsoft-tools {
+    margin: 50px auto;
+}
+.card {
+    width: 300px;
+}
+.card h3 {
+    margin-top: 40px;
+}
+.card p {
+    margin: 10px 0;
+}
+.card a {
+    color: #0067B8;
+}
+.card a:hover {
+    border-color: #0067B8;
+}
