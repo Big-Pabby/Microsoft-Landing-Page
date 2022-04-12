@@ -46,6 +46,10 @@ a:hover {
     opacity: 0.9;
 }
 
+i {
+    margin-left: 10px;
+}
+
 body {
     font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;;
 }
@@ -60,13 +64,14 @@ body {
     margin-right: 20px;
 }
 
-.links a {
+.nav-links a {
     margin-left: 10px;
 }
 
 .showcase {
     background: url('../images/microsoft-showcase-image.webp');
     background-repeat: no-repeat;
+    background-size: cover;
     height: 460px;
     color: #ffffff;
 }
@@ -90,6 +95,7 @@ body {
 }
 .card {
     width: 300px;
+    justify-self: center;
 }
 .card h3 {
     margin-top: 40px;
@@ -102,4 +108,22 @@ body {
 }
 .card a:hover {
     border-color: #0067B8;
+}
+.card img:hover {
+ opacity: 0.8;
+}
+
+@media(max-width: 768px) {
+    .grid {
+        grid-template-columns:  1fr 1fr;
+    }
+}
+
+@media(max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .nav-links {
+        display: none;
+    }
 }
