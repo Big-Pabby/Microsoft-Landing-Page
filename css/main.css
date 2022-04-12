@@ -27,13 +27,23 @@ button {
     border: none;
 }
 
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin: 20px 0;
+}
+
 a {
     text-decoration: none;
     color: #262626;
+    transition: .3s;
 }
 a:hover {
     border-bottom: 2px solid #000000;
     padding-bottom: 2px;
+    margin-right: 5px;
 }
 
 .btn {
@@ -48,10 +58,12 @@ a:hover {
 
 i {
     margin-left: 10px;
+    justify-self: center;
 }
 
 body {
-    font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;;
+    font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #000000;
 }
 
 
@@ -96,6 +108,7 @@ body {
 .card {
     width: 300px;
     justify-self: center;
+    margin-bottom: 20px;
 }
 .card h3 {
     margin-top: 40px;
@@ -103,7 +116,7 @@ body {
 .card p {
     margin: 10px 0;
 }
-.card a {
+.card a, .card i {
     color: #0067B8;
 }
 .card a:hover {
@@ -113,17 +126,78 @@ body {
  opacity: 0.8;
 }
 
+.outlook {
+    background: url('../images/Outlook-bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 460px;
+    color: #000000;
+}
+.outlook-content {
+    width: 480px;
+    margin: auto 50px;
+}
+
+.outlook-content p {
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+
+.outlook-content .btn a {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.business {
+    margin-top: 50px;
+}
+
+footer {
+    background: #f2f2f2;
+    color: #616161;
+    padding-top: 50px;
+}
+
+footer .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.footer-links h3 {
+    font-size: 15px;
+}
+.footer-links ul {
+    font-size: 11px;
+}
+.footer-links ul a {
+    color: #616161;
+}
+.footer-links ul a:hover {
+    border-bottom: none;
+    padding-bottom: none;
+    margin-right: 0;
+    color: #000000;
+    text-decoration: underline;
+}
+
 @media(max-width: 768px) {
     .grid {
         grid-template-columns:  1fr 1fr;
+    }
+
+    .business {
+        text-align: center;
     }
 }
 
 @media(max-width: 500px) {
     .grid {
         grid-template-columns: 1fr;
+        text-align: center;
     }
     .nav-links {
         display: none;
+    }
+    footer .grid {
+        grid-template-columns: 1fr;
+        text-align: left;
     }
 }
