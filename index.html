@@ -9,23 +9,45 @@
     <title>Microsoft - Official Home Page</title>
 </head>
 <body>
-    <nav class="nav-bar container flex">
-        <div class="nav flex">
-            <img src="./images/MicrosoftLogo.png" alt="Microsoft-logo" width="110px">
-            <div class="nav-links flex">
-                <a href="#" class="">Microsoft 365</a>
-                <a href="#">Office</a>
-                <a href="#">Windows</a>
-                <a href="#">Xbox</a>
-                <a href="#">Support</a>
+    <header>
+        <nav class="nav-bar container flex">
+            <div class="nav flex">
+                <img src="./images/MicrosoftLogo.png" alt="Microsoft-logo" width="110px">
+                <div class="nav-links flex">
+                    <a href="#" class="">Microsoft 365</a>
+                    <a href="#">Office</a>
+                    <a href="#">Windows</a>
+                    <a href="#">Xbox</a>
+                    <a href="#">Support</a>
+                </div>
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <!-- Hamburger Icon-->
+            <button id="menu-btn" class="hamburger">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu-->
+        <div class="hidden">
+            <div id="menu" class="menu-hidden">
+                <div class=" mobile-menu mobile-nav">
+                    <li><a href="#">Microsoft 365</a></li>
+                    <li><a href="#">Office</a></li>
+                    <li><a href="#">Windows</a></li>
+                    <li><a href="#">Xbox</a></li>
+                    <li><a href="#">Support</a></li>
+                </div>
             </div>
         </div>
-        <div class="icons">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-cart-shopping"></i>
-            <i class="fa-solid fa-user"></i>
-        </div>
-    </nav>
+    </header>
+
     <section class="container showcase flex">
         <div class="showcase-content">
             <h2>Designed for life today—and tomorrow</h2>
@@ -167,5 +189,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

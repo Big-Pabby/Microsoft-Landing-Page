@@ -25,9 +25,15 @@
 
 button {
     border: none;
+    background: none;
+    outline: none;
 }
 
 ul {
+    list-style: none;
+}
+
+li {
     list-style: none;
 }
 
@@ -64,6 +70,12 @@ i {
 body {
     font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #000000;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: #fff;
 }
 
 
@@ -178,10 +190,29 @@ footer .grid {
     text-decoration: underline;
 }
 
-@media(max-width: 768px) {
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.menu-hidden {
+    display: none;
+}
+
+.menu-block {
+    display: block;
+}
+
+@media(max-width: 960px) {
     .grid {
         grid-template-columns:  1fr 1fr;
     }
+
+    
 
     .business {
         text-align: center;
@@ -195,6 +226,73 @@ footer .grid {
     }
     .nav-links {
         display: none;
+    }
+
+    /* Mobile Hamburger */
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        transition: all 0.25s;
+        position: relative;
+    }
+
+    .hamburger-top, .hamburger-middle, .hamburger-bottom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 2px;
+        background: #000;
+        transform: rotate(0);
+        transition: all 0.5s;
+    }
+
+    .hamburger-middle {
+        transform: translateY(7px);
+    }
+
+    .hamburger-bottom {
+        transform: translateY(14px);
+    }
+
+    .open {
+        transform: rotate(90deg);
+        transform: translateY(0px);
+    }
+
+    .open .hamburger-top {
+        transform: rotate(45deg) translateY(6px) translate(6px);
+    }
+
+    .open .hamburger-middle{
+        display: none;
+    }
+
+    .open .hamburger-bottom {
+        transform: rotate(-45deg) translateY(6px) translate(-6px);
+    }
+
+    .hidden {
+        display: block;
+    }
+
+    .mobile-menu {
+        height: 100vh;
+        width: 50%;
+        position: absolute;
+        z-index: 100;
+        background: #fff;
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-top: 50px;
     }
     footer .grid {
         grid-template-columns: 1fr;
